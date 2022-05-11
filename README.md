@@ -26,7 +26,7 @@ The model also restores the complex upper-casing of words like *YouTube*, *MobiF
 ## 🚋 Usage
 
 **Below is a quick way to get up and running with the model.**
-1. Download files from hub
+1. Download files from hub  
 ```python
 import os
 import shutil
@@ -48,7 +48,7 @@ def download_files(repo_id, cache_dir=None, ignore_regex=None):
 download_files(repo_id="dragonSwing/vibert-capu", cache_dir=cache_dir, ignore_regex=["*.json", "*.bin"])
 sys.path.append(cache_dir)
 ```
-2. Sample python code
+2. Sample python code  
 ```python
 import os
 from gec_model import GecBERTModel
