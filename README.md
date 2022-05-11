@@ -5,8 +5,7 @@ tags:
 - capitalization
 - punctuation
 - token-classification
-- sequence-tagger-model
-license: mit
+license: cc-by-sa-4.0
 datasets:
 - oscar-corpus/OSCAR-2109
 metrics:
@@ -32,19 +31,16 @@ import os
 import shutil
 import sys
 from huggingface_hub import snapshot_download
-
 cache_dir = "./capu"
 def download_files(repo_id, cache_dir=None, ignore_regex=None):
     download_dir = snapshot_download(repo_id=repo_id, cache_dir=cache_dir, ignore_regex=ignore_regex)
     if cache_dir is None or download_dir == cache_dir:
         return download_dir
-
     file_names = os.listdir(download_dir)
     for file_name in file_names:
         shutil.move(os.path.join(download_dir, file_name), cache_dir)
     os.rmdir(download_dir)
     return cache_dir
-
 download_files(repo_id="dragonSwing/vibert-capu", cache_dir=cache_dir, ignore_regex=["*.json", "*.bin"])
 sys.path.append(cache_dir)
 ```
@@ -66,14 +62,14 @@ model("theo đó thủ tướng dự kiến tiếp bộ trưởng nông nghiệp
 -----------------------------------------------
 ## 📡 Training data
 Here is the number of product reviews we used for fine-tuning the model:
-| Language | Number of text samples|
+| Language | Number of text samples |
 | -------- | ----------------- |
-| Vietnamese  | 5,600,000           |
+| Vietnamese  | 5,600,000  |
 -----------------------------------------------
 ## 🎯 Accuracy
 Below is a breakdown of the performance of the model by each label on 120,000 held-out text samples:
-|  label    |   precision  |  recall | f1-score  | support|
-| --------- | -------------|-------- | ----------|--------|
+|  label    |   precision  |  recall | f1-score  | support |
+| --------- | ------------- | -------- | ---------- | -------- |
 |     **Upper**    |   0.88       | 0.89    |  0.89     |  56497   |
 |     **Complex-Upper**    |   0.92       | 0.83    |  0.88     |   480   |
 |     **.**    |   0.81       | 0.82    |  0.82     | 18139   |
