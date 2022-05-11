@@ -24,6 +24,7 @@ The model also restores the complex upper-casing of words like *YouTube*, *MobiF
 
 -----------------------------------------------
 ## 🚋 Usage
+
 **Below is a quick way to get up and running with the model.**
 1. Download files from hub
 ```python
