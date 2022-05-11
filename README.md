@@ -71,7 +71,7 @@ Here is the number of product reviews we used for fine-tuning the model:
 
 -----------------------------------------------
 ## 🎯 Accuracy
-Below is a breakdown of the performance of the model by each label on 120,000 held-out text samples:
+Below is a breakdown of the performance of the model by each label on 10,000 held-out text samples:
 
 |  label    |   precision  |  recall | f1-score  | support |
 | --- | --- | --- | --- | --- |
