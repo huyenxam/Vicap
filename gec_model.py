@@ -9,9 +9,9 @@ import warnings
 
 import torch
 from transformers import AutoTokenizer
-from .modeling_seq2labels import Seq2LabelsModel
-from .vocabulary import Vocabulary
-from .utils import PAD, UNK, START_TOKEN, get_target_sent_by_edits
+from modeling_seq2labels import Seq2LabelsModel
+from vocabulary import Vocabulary
+from utils import PAD, UNK, START_TOKEN, get_target_sent_by_edits
 
 logging.getLogger("werkzeug").setLevel(logging.ERROR)
 logger = logging.getLogger(__file__)
@@ -440,4 +440,4 @@ class GecBERTModel(torch.nn.Module):
         if merge_punc:
             final_batch = [re.sub(r'\s+(%s)' % self.punc_str, r'\1', x) for x in final_batch]
 
-        return final_batch, total_updates
+        return final_batch
