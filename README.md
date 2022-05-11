@@ -37,14 +37,14 @@ cache_dir = "./capu"
 def download_files(repo_id, cache_dir=None, ignore_regex=None):
     download_dir = snapshot_download(repo_id=repo_id, cache_dir=cache_dir, ignore_regex=ignore_regex)
     if cache_dir is None or download_dir == cache_dir:
-        return download_dir  
+        return download_dir
 
     file_names = os.listdir(download_dir)
     for file_name in file_names:
         shutil.move(os.path.join(download_dir, file_name), cache_dir)
     os.rmdir(download_dir)
     return cache_dir
-  
+
 download_files(repo_id="dragonSwing/vibert-capu", cache_dir=cache_dir, ignore_regex=["*.json", "*.bin"])
 sys.path.append(cache_dir)
 ```
@@ -74,11 +74,11 @@ Here is the number of product reviews we used for fine-tuning the model:
 Below is a breakdown of the performance of the model by each label on 120,000 held-out text samples:
 |  label    |   precision  |  recall | f1-score  | support|
 | --------- | -------------|-------- | ----------|--------|
-|     **Upper**    |   0.88       | 0.89    |  0.89     |  56497   
-|     **Complex-Upper**    |   0.92       | 0.83    |  0.88     |   480   
-|     **.**    |   0.81       | 0.82    |  0.82     | 18139   
-|    **,**    |   0.73       | 0.70    |  0.71     | 22961   
-|     **:**    |   0.74       | 0.56    |  0.64     |   1432   
-|     **?**    |   0.80       | 0.76    |  0.78     |   1730   
-|     **none**    |   0.99       | 0.99    |  0.99     |475611   
+|     **Upper**    |   0.88       | 0.89    |  0.89     |  56497   |
+|     **Complex-Upper**    |   0.92       | 0.83    |  0.88     |   480   |
+|     **.**    |   0.81       | 0.82    |  0.82     | 18139   |
+|    **,**    |   0.73       | 0.70    |  0.71     | 22961   |
+|     **:**    |   0.74       | 0.56    |  0.64     |   1432   |
+|     **?**    |   0.80       | 0.76    |  0.78     |   1730   |
+|     **none**    |   0.99       | 0.99    |  0.99     |475611   |
 -----------------------------------------------
