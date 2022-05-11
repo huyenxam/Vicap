@@ -41,7 +41,7 @@ def download_files(repo_id, cache_dir=None, ignore_regex=None):
         shutil.move(os.path.join(download_dir, file_name), cache_dir)
     os.rmdir(download_dir)
     return cache_dir
-download_files(repo_id="dragonSwing/vibert-capu", cache_dir=cache_dir, ignore_regex=["*.json", "*.bin"])
+cache_dir = download_files(repo_id="dragonSwing/vibert-capu", cache_dir=cache_dir, ignore_regex=["*.json", "*.bin"])
 sys.path.append(cache_dir)
 ```
 2. Sample python code  
