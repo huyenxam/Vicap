@@ -66,6 +66,7 @@ Here is the number of product reviews we used for fine-tuning the model:
 | Language | Number of text samples |
 | --- | --- |
 | Vietnamese  | 5,600,000  |
+
 -----------------------------------------------
 ## 🎯 Accuracy
 Below is a breakdown of the performance of the model by each label on 120,000 held-out text samples:
