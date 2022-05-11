@@ -62,14 +62,16 @@ model("theo đó thủ tướng dự kiến tiếp bộ trưởng nông nghiệp
 -----------------------------------------------
 ## 📡 Training data
 Here is the number of product reviews we used for fine-tuning the model:
+
 | Language | Number of text samples |
-| -------- | ----------------- |
+| --- | --- |
 | Vietnamese  | 5,600,000  |
 -----------------------------------------------
 ## 🎯 Accuracy
 Below is a breakdown of the performance of the model by each label on 120,000 held-out text samples:
+
 |  label    |   precision  |  recall | f1-score  | support |
-| --------- | ------------- | -------- | ---------- | -------- |
+| --- | --- | --- | --- | --- |
 |     **Upper**    |   0.88       | 0.89    |  0.89     |  56497   |
 |     **Complex-Upper**    |   0.92       | 0.83    |  0.88     |   480   |
 |     **.**    |   0.81       | 0.82    |  0.82     | 18139   |
